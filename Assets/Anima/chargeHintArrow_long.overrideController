@@ -1,0 +1,13 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: chargeHintArrow_long
+  m_Controller: {fileID: 9100000, guid: 90b7690c91dd7a444934a568c9aa97cd, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: d314c6fa95b64384b983b2d0024df077, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9f3c14de90e0ad74fbb45f80c83c7ce6, type: 2}

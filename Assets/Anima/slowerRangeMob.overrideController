@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: slowerRangeMob
+  m_Controller: {fileID: 9100000, guid: 9f8f203e502157a45b6b76be66cc1963, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: b28328d1b5d582e45a6fbc7cf2885a29, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 84fe022511981884a97ad3fa0277ec2f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: f1d2b627a6c30dd4a89b26e7dc98ea8f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ac77348ecfd3b294da06a22d41a99626, type: 2}

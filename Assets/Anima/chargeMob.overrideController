@@ -1,0 +1,13 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: chargeMob
+  m_Controller: {fileID: 9100000, guid: 302b14d38c15a78409b732ddb169cb50, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 3ebedb0329c83a744bcabeea8ad7645b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 399e21e0a1265224aa3c332f0f2ac11c, type: 2}

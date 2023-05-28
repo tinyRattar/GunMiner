@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8831367665088133570
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 474797416664208371}
+  - component: {fileID: 3374954537254646304}
+  m_Layer: 0
+  m_Name: FX_ScrapBurst
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &474797416664208371
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8831367665088133570}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.2907208, y: -4.4182863, z: -8.121742}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3374954537254646304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8831367665088133570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98ce0f527d9aabb4cb7716d0acd5900d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  list_scraps:
+  - {fileID: -1887819319, guid: dd048a6602d378543b2bc0a422308598, type: 3}
+  - {fileID: -837771024, guid: dd048a6602d378543b2bc0a422308598, type: 3}
+  - {fileID: 1467716892, guid: dd048a6602d378543b2bc0a422308598, type: 3}
+  - {fileID: 1026171459, guid: dd048a6602d378543b2bc0a422308598, type: 3}
+  - {fileID: -1260499952, guid: dd048a6602d378543b2bc0a422308598, type: 3}
+  - {fileID: 1767721876, guid: dd048a6602d378543b2bc0a422308598, type: 3}
+  num: 24
+  speedMin: 5
+  speedMax: 15
+  lifetimeMin: 5
+  lifetimeMax: 5
+  pfb_scrap: {fileID: 7419580901948596293, guid: 66ad1bcd421af4f4da7b908c9775c5ce, type: 3}
+  emitAngleMin: -60
+  emitAngleMax: 60
+  particleRotateMin: 0
+  particleRotateMax: 360
+  genOffsetLeft: 1
+  genOffsetRight: 1
+  genOffsetUp: 1
+  genOffsetDown: 1
+  addOnFx: {fileID: 2066999606466978683, guid: 5ecd3490fcc7b5b4a9c8484c7728776d, type: 3}

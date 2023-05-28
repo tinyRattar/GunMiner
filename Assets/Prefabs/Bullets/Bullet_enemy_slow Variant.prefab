@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6622565581304446647
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 85929070042321269, guid: 96c0836a1ad4d3846952add589f53799, type: 3}
+      propertyPath: m_Name
+      value: Bullet_enemy_slow Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200230911548320245, guid: 96c0836a1ad4d3846952add589f53799, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3868478963408560819, guid: 96c0836a1ad4d3846952add589f53799, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3868478963408560819, guid: 96c0836a1ad4d3846952add589f53799, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4808047797033833119, guid: 96c0836a1ad4d3846952add589f53799, type: 3}
+      propertyPath: m_Size.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4808047797033833119, guid: 96c0836a1ad4d3846952add589f53799, type: 3}
+      propertyPath: m_Size.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5383142304485617681, guid: 96c0836a1ad4d3846952add589f53799, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e279150cb1ebc164ca0653e008e5cc16, type: 3}
+    - target: {fileID: 5863405908050975208, guid: 96c0836a1ad4d3846952add589f53799, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e279150cb1ebc164ca0653e008e5cc16, type: 3}
+    - target: {fileID: 5863405908050975208, guid: 96c0836a1ad4d3846952add589f53799, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5863405908050975208, guid: 96c0836a1ad4d3846952add589f53799, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5863405908050975208, guid: 96c0836a1ad4d3846952add589f53799, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6327294372402492950, guid: 96c0836a1ad4d3846952add589f53799, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6327294372402492950, guid: 96c0836a1ad4d3846952add589f53799, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6327294372402492950, guid: 96c0836a1ad4d3846952add589f53799, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6327294372402492950, guid: 96c0836a1ad4d3846952add589f53799, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6327294372402492950, guid: 96c0836a1ad4d3846952add589f53799, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6327294372402492950, guid: 96c0836a1ad4d3846952add589f53799, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6327294372402492950, guid: 96c0836a1ad4d3846952add589f53799, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6327294372402492950, guid: 96c0836a1ad4d3846952add589f53799, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6327294372402492950, guid: 96c0836a1ad4d3846952add589f53799, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6327294372402492950, guid: 96c0836a1ad4d3846952add589f53799, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6327294372402492950, guid: 96c0836a1ad4d3846952add589f53799, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6736589061798832113, guid: 96c0836a1ad4d3846952add589f53799, type: 3}
+      propertyPath: m_Name
+      value: Bullet_enemy_slow Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8453309491964495907, guid: 96c0836a1ad4d3846952add589f53799, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8453309491964495907, guid: 96c0836a1ad4d3846952add589f53799, type: 3}
+      propertyPath: lifetime
+      value: 2.666667
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 96c0836a1ad4d3846952add589f53799, type: 3}
