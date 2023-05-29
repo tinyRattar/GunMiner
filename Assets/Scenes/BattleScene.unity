@@ -1484,7 +1484,7 @@ PrefabInstance:
     - target: {fileID: 1507790359914414727, guid: 84bf07b4a9f4f334ba497c4e587372a6, type: 3}
       propertyPath: audioOnHit
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: c323bea5c4d862c4f8dc17d948cdcd6d, type: 3}
     - target: {fileID: 1507790359914414727, guid: 84bf07b4a9f4f334ba497c4e587372a6, type: 3}
       propertyPath: hitShockSR
       value: 

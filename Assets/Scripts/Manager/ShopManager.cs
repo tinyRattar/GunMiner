@@ -306,7 +306,12 @@ public class ShopManager : Singleton<ShopManager>
     public void SayGoodBye()
     {
         if (inShop)
-            npc.ShowText(5, 0, 0);
+        {
+            if (curGood)
+                npc.ShowText(5, 1, 0);
+            else
+                npc.ShowText(5, 0, 0);
+        }
     }
     public void PleaseSay(int triggerIdx, int conditionIdx1, int conditionIdx2)
     {
