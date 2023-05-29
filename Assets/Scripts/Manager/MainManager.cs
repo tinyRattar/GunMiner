@@ -335,7 +335,7 @@ public class MainManager : Singleton<MainManager>
         }
         if (isGameOver)
         {
-            if (spaceRestart && Input.GetKeyDown(KeyCode.Space))
+            if (spaceRestart && (Input.GetKeyDown(KeyCode.Space)|| Input.GetKeyDown(KeyCode.Escape)))
             {
                 if (isGameWin)
                     ReturnHome();
