@@ -77,11 +77,18 @@ public class MainManager : Singleton<MainManager>
     bool isGameOver = false;
     bool isGameWin = false;
     bool spaceRestart = false;
+    AsyncOperation asyncOperation;
 
     [Header("UI")]
     [SerializeField] FX_UITimer UITimer;
     [SerializeField] Text txtLevelRemain;
 
+    [Header("教程")]
+    [SerializeField] GameObject pfbPageHelp;
+    [SerializeField] float timePageShow;
+    [SerializeField] Transform pageGenAnchor;
+
+    [Header("其他")]
     [SerializeField] CameraShock cameraShock;
     [SerializeField] SpriteRenderer srProspect;
     [SerializeField] SpriteRenderer srInputHint;
@@ -132,6 +139,14 @@ public class MainManager : Singleton<MainManager>
     public void ReturnHome()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void LoadEndCG()
+    {
+        if (asyncOperation != null)
+            asyncOperation.allowSceneActivation = true;
+        else
+            SceneManager.LoadScene(3);
     }
 
     public void OpenSettingMenu()
@@ -238,6 +253,8 @@ public class MainManager : Singleton<MainManager>
         cgBehavior.StartCG(cgIdx);
         WeaponManager.Instance.GetCurrentWeapon().SetInWork(false);
         InputManager.Instance.SetFreezeInput(true);
+        asyncOperation = SceneManager.LoadSceneAsync(3);
+        asyncOperation.allowSceneActivation = false;
     }
 
     public void SetSpaceRestart()
@@ -325,6 +342,18 @@ public class MainManager : Singleton<MainManager>
     }
     private void Update()
     {
+        if (pfbPageHelp)
+        {
+            if (timePageShow >= 0)
+            {
+                timePageShow -= Time.deltaTime;
+                if (timePageShow < 0.0f)
+                {
+                    GameObject.Instantiate(pfbPageHelp, pageGenAnchor.position, Quaternion.identity, pageGenAnchor);
+                }
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.M) && Input.GetKey(KeyCode.LeftShift))
         {
             cheatMode = !cheatMode;
@@ -338,7 +367,7 @@ public class MainManager : Singleton<MainManager>
             if (spaceRestart && (Input.GetKeyDown(KeyCode.Space)|| Input.GetKeyDown(KeyCode.Escape)))
             {
                 if (isGameWin)
-                    ReturnHome();
+                    LoadEndCG();
                 else
                     Restart();
             }

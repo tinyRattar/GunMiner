@@ -16,6 +16,7 @@ public class CGScene : MonoBehaviour
     [SerializeField] GameObject goHint;
     [SerializeField] Image imgSpaceHold;
     float timerWaitSpace;
+    [SerializeField] int tarScene = 2;
 
 
     public void LoadScene()
@@ -30,7 +31,7 @@ public class CGScene : MonoBehaviour
 
     private void Start()
     {
-        asyncOperation = SceneManager.LoadSceneAsync(2);
+        asyncOperation = SceneManager.LoadSceneAsync(tarScene);
         asyncOperation.allowSceneActivation = false;
     }
 

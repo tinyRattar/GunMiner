@@ -14,8 +14,8 @@ public class FX_ScrapBurst : MonoBehaviour
 
     [SerializeField] float emitAngleMin = 0.0f;
     [SerializeField] float emitAngleMax = 360.0f;
-    [SerializeField] float particleRotateMin = 0.0f;
-    [SerializeField] float particleRotateMax = 360.0f;
+    //[SerializeField] float particleRotateMin = 0.0f;
+    //[SerializeField] float particleRotateMax = 360.0f;
     [SerializeField] float genOffsetLeft = 0.0f;
     [SerializeField] float genOffsetRight = 0.0f;
     [SerializeField] float genOffsetUp = 0.0f;

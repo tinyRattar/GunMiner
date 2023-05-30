@@ -42,6 +42,7 @@ public class SettingMenu : MonoBehaviour
     [SerializeField] string strDeleted;
 
     [Header("单人模式")]
+    [SerializeField] bool canSwitchSoloMode;
     [SerializeField] Text txtSoloMode;
     [SerializeField] string strSoloModeOn;
     [SerializeField] string strSoloModeOff;
@@ -168,6 +169,20 @@ public class SettingMenu : MonoBehaviour
         audioValue = PlayerPrefs.GetFloat("audioValue", 1.0f);
         idxResolution = PlayerPrefs.GetInt("resolutionMode", 0);
         isFullscreen = PlayerPrefs.GetInt("fullscreen", 0) > 0;
+
+        if (txtSoloMode)
+        {
+            if (InputManager.Instance.GetAutoPilotState())
+            {
+                txtSoloMode.text = strSoloModeOn;
+                txtSoloMode.color = txtColorOn;
+            }
+            else
+            {
+                txtSoloMode.text = strSoloModeOff;
+                txtSoloMode.color = txtColorOff;
+            }
+        }
     }
 
     // Update is called once per frame
@@ -272,9 +287,9 @@ public class SettingMenu : MonoBehaviour
                 imageDeleteHint.fillAmount = timerDeleteSaveFile / timeDeleteSaveFile;
             }
 
-            if (txtSoloMode)
+            if (canSwitchSoloMode)
             {
-                if (Input.GetKeyDown(KeyCode.F11))
+                if (Input.GetKeyDown(KeyCode.P))
                 {
                     bool ret = InputManager.Instance.SwitchAutoPilot();
                     if (ret)

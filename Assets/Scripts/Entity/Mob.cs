@@ -273,7 +273,16 @@ public class Mob : Entity
         lastHitSrc = info.Src;
         if (audioOnHit) SEManager.Instance.PlaySE(audioOnHit);
         timerHitFX = timeHitFX;
-        return base.OnHit(info);
+        bool ret = base.OnHit(info);
+        if (ret)
+        {
+            if (LootManager.Instance)
+            {
+                if (LootManager.Instance.GetLootMulti() > 1 && dropIdx == 0)
+                    LootManager.Instance.GenerateOnce(dropIdx, this.transform.position, Quaternion.identity);
+            }
+        }
+        return ret;
     }
 
     public override bool StartKnockback(float kbPower, float kbTime, Vector3 direct)

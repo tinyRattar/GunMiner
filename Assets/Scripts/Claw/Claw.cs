@@ -354,6 +354,7 @@ public class Claw : MonoBehaviour
         // 抓钩缩回速度 = 基础速度 - 矿物数量 * (1 - e^(-0.5 * (矿物总重量 / 矿物数量)))，缩回速度<1则=1，-0.5作为调节系数。
         float totalWeight = 0.0f;
         bool canNotDrag = false;
+        dragScale = 1.0f;
         if (listOnDragOres.Count > 0)
         {
             foreach (Ore ore in listOnDragOres)
@@ -364,11 +365,14 @@ public class Claw : MonoBehaviour
                     break;
                 }
                 else
+                {
                     totalWeight += ore.GetWeight();
+                }
             }
             //float speed = dragSpeed - listOnDragOres.Count * (1 - Mathf.Exp(-0.5f * (totalWeight / listOnDragOres.Count)));
             //dragScale = speed / dragSpeed;
-            dragScale = 1.0f - listOnDragOres.Count * (1.0f - Mathf.Exp(-0.5f * (totalWeight / listOnDragOres.Count)));
+            //dragScale = 1.0f - listOnDragOres.Count * (1.0f - Mathf.Exp(-0.5f * (totalWeight / listOnDragOres.Count)));
+            dragScale = Mathf.Exp(-0.5f * (totalWeight));
             if (dragScale < minDragScale) dragScale = minDragScale;
             if (canNotDrag)
                 dragScale = 0.0f;

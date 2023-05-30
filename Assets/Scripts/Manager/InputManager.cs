@@ -29,10 +29,21 @@ public class InputManager : Singleton<InputManager>
     //    return autoPilot;
     //}
 
+    public bool GetAutoPilotState()
+    {
+        return autoPilot;
+    }
+
     public bool SwitchAutoPilot()
     {
-        if (canAutoPilot)
-            autoPilot = !autoPilot;
+        autoPilot = !autoPilot;
+        UpdateAutoPilot();
+
+        return autoPilot;
+    }
+
+    public void UpdateAutoPilot()
+    {
         if (autoPilot)
         {
             if (goAutoPilotHint)
@@ -40,6 +51,7 @@ public class InputManager : Singleton<InputManager>
                 goAutoPilotHint.SetActive(true);
                 goManualToolkit.SetActive(false);
             }
+            PlayerPrefs.SetInt("autoPilot", 1);
         }
         else
         {
@@ -48,8 +60,8 @@ public class InputManager : Singleton<InputManager>
                 goAutoPilotHint.SetActive(false);
                 goManualToolkit.SetActive(true);
             }
+            PlayerPrefs.SetInt("autoPilot", 0);
         }
-        return autoPilot;
     }
 
     public void SetFreezeInput(bool flag)
@@ -76,17 +88,31 @@ public class InputManager : Singleton<InputManager>
                 shootDirect = distance.normalized;
             }
         }
-        float tarDegree = Quaternion.FromToRotation(Vector3.up, shootDirect).eulerAngles[2];
-        if (tarDegree > 180)
-            tarDegree = tarDegree - 360;
-        int ret = WeaponManager.Instance.GetCurrentWeapon().SwingToTargetDegree(tarDegree);
-        uiAutoPilot.SetState(ret);
+        if (shootDirect == Vector3.zero)
+        {
+            uiAutoPilot.SetState(2);
+        }
+        else
+        {
+            float tarDegree = Quaternion.FromToRotation(Vector3.up, shootDirect).eulerAngles[2];
+            if (tarDegree > 180)
+                tarDegree = tarDegree - 360;
+            int ret = WeaponManager.Instance.GetCurrentWeapon().SwingToTargetDegree(tarDegree);
+            uiAutoPilot.SetState(ret);
+        }
+    }
+
+    protected override void Awake()
+    {
+        base.Awake();
+        autoPilot = PlayerPrefs.GetInt("autoPilot", 0) == 1;
     }
 
     // Start is called before the first frame update
     void Start()
     {
         miner = MinerManager.Instance.GetMiner();
+        UpdateAutoPilot();
     }
 
     private void FixedUpdate()

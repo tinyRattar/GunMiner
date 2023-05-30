@@ -8,7 +8,7 @@ public class UI_ItemCardUse : MonoBehaviour
     [SerializeField] List<Sprite> listSprites;
     [SerializeField] List<float> listPosY;
     [SerializeField] Sprite srCard;
-    int curState = 0;
+    //int curState = 0;
     // Start is called before the first frame update
     void Start()
     {

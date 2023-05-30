@@ -40,6 +40,9 @@ public class CGBehavior : MonoBehaviour
     float timerReward;
     List<int> listRewardNew;
 
+    [Header("空格提示")]
+    [SerializeField] GameObject goSpaceHint;
+
     [Header("调试")]
     [SerializeField] bool startShowAchieve;
 
@@ -140,6 +143,7 @@ public class CGBehavior : MonoBehaviour
     {
         inRewardShow = false;
         MainManager.Instance.SetSpaceRestart();
+        goSpaceHint.SetActive(true);
         //animator.Play("waitExit");
     }
 
