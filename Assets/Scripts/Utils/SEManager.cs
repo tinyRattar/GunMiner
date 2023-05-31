@@ -11,7 +11,7 @@ public class SEManager : Singleton<SEManager>
 
     float volumeBGM = 1;
     [SerializeField] Text txtVolumeBGM;
-    [SerializeField] AudioSource BGM;
+    [SerializeField] List<AudioSource> listBGM;
 
     public void VolumeChange(float value)
     {
@@ -89,8 +89,10 @@ public class SEManager : Singleton<SEManager>
             else
                 txtVolumeBGM.text = "BGM Volume:" + volumeBGM;
         }
-        if (BGM)
+        foreach (AudioSource BGM in listBGM)
+        {
             BGM.volume = volumeBGM;
+        }
     }
 
     private void Start()

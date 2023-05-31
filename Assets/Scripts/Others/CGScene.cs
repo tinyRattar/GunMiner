@@ -21,6 +21,7 @@ public class CGScene : MonoBehaviour
 
     public void LoadScene()
     {
+        PlayerPrefs.SetInt("pageHelpShow", 0);
         asyncOperation.allowSceneActivation = true;
     }
     // Start is called before the first frame update

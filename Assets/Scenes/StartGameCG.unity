@@ -301,6 +301,7 @@ MonoBehaviour:
   timeWaitSpace: 3
   goHint: {fileID: 1954109666}
   imgSpaceHold: {fileID: 512885937}
+  tarScene: 2
 --- !u!4 &1235806626
 Transform:
   m_ObjectHideFlags: 0
@@ -525,7 +526,7 @@ VideoPlayer:
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
   m_RenderMode: 1
-  m_AspectRatio: 2
+  m_AspectRatio: 3
   m_DataSource: 0
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1

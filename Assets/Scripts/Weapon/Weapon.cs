@@ -275,8 +275,9 @@ public class Weapon : MonoBehaviour
                         DamageInfo _info = new DamageInfo(slashDamage, src, DamageType.melee);
                         if (hitboxSword == hitboxSwordIdle)
                             _info.ToolDamageBonus = 0.2f;
-                        mob.OnHit(_info);
-                        mob.StartKnockback(slashKnockbackPower, slashKnockbackTime, (mob.transform.position - this.transform.position).normalized);
+                        bool ret = mob.OnHit(_info);
+                        if (ret)
+                            mob.StartKnockback(slashKnockbackPower, slashKnockbackTime, (mob.transform.position - this.transform.position).normalized);
                     }
                 }
             }

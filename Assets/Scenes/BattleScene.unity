@@ -13920,6 +13920,18 @@ PrefabInstance:
       propertyPath: BGM
       value: 
       objectReference: {fileID: 119684504}
+    - target: {fileID: 3883934056850154654, guid: eeda9cac41c7a784ebf659178932bab9, type: 3}
+      propertyPath: listBGM.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3883934056850154654, guid: eeda9cac41c7a784ebf659178932bab9, type: 3}
+      propertyPath: listBGM.Array.data[0]
+      value: 
+      objectReference: {fileID: 119684504}
+    - target: {fileID: 3883934056850154654, guid: eeda9cac41c7a784ebf659178932bab9, type: 3}
+      propertyPath: listBGM.Array.data[1]
+      value: 
+      objectReference: {fileID: 896163794}
     - target: {fileID: 4966077827207369005, guid: eeda9cac41c7a784ebf659178932bab9, type: 3}
       propertyPath: m_Name
       value: SEManager
