@@ -77,6 +77,8 @@ public class InputManager : Singleton<InputManager>
         Vector3 shootDirect = Vector3.zero;
         foreach (Mob mob in listMobs)
         {
+            if(!mob.CanBeDetected())
+                continue;
             Vector3 distance = mob.transform.position - srcPos;
             if (detectDistance < distance.magnitude)
             {

@@ -31,6 +31,8 @@ public class Drone : MonoBehaviour
         Vector3 shootDirect = Vector3.zero;
         foreach (Mob mob in listMobs)
         {
+            if(!mob.CanBeDetected())
+                continue;
             Vector3 distance = mob.transform.position - goFirepoint.transform.position;
             if (detectDistance < distance.magnitude)
             {

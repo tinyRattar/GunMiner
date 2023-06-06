@@ -31,6 +31,8 @@ public class Mob : Entity
     [SerializeField] bool resetPosInSea = true;
     [SerializeField] float seaY = 1.0f;
 
+    [SerializeField] bool canDeceted = true; // be detected by drone/potato bro
+
     [Header("´¥Åö")]
     [SerializeField] protected bool dealTouchDamage = true;
     [SerializeField] float touchDamage;
@@ -75,6 +77,17 @@ public class Mob : Entity
 
 
     Entity lastHitSrc;
+    public virtual bool CanBeDetected()
+    {
+        if(canDeceted)
+        {
+            if (curState == MobState.dead) 
+                return false;
+            return canHit;
+        }
+        else
+            return false;
+    }
     public void ForceRemove()
     {
         dropProp = 0.0f;
