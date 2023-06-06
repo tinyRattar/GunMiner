@@ -8,5 +8,6 @@ public class CoinAbsorbCard : ItemCard
     {
         base.OnStartUse();
         EffectManager.Instance.ActivateLootAbsorb(lastTime);
+        EffectManager.Instance.ActivateMagnetClaw(lastTime);
     }
 }
